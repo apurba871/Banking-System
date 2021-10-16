@@ -1,5 +1,87 @@
-img {
-  float: left;
-  width: 80%;
-  height: 80%;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  background-image: url("../resources/bg3.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* ---STUFFS FOR ANIMATION--- */
+::-webkit-scrollbar {
+  display: none;
+}
+
+div.slide-up {
+  height: 250px;
+  /* un-comment below line to turn off animation */
+  /* overflow: hidden; */
+}
+
+div.slide-up h1,
+h2,
+h3 {
+  animation: 5s slide-up;
+  margin-top: 0%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+h1:hover {
+  cursor: default;
+}
+.spacing {
+  height: 200px;
+}
+
+/* a {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+} */
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  /* padding: 5px 10px; */
+  padding: 1em 2em;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 5px solid rgb(255, 115, 0);
+  font-size: 1em;
+  margin-top: 100px;
+  transition: all 0.25s;
+  max-width: 250px;
+  max-height: 100px;
+  background-color: blanchedalmond;
+  font-family: "Montserrat";
+}
+
+.btn:hover {
+  /* border-color: #f1ff5c; */
+  cursor: pointer;
+  box-shadow: 0 0.5em 1.5em -0.2em rgb(255, 0, 72);
+  transform: translateY(-0.25em);
 }
